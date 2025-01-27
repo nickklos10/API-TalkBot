@@ -17,8 +17,8 @@ A chatbot web application leveraging OpenAI's GPT model for conversational AI. T
 
 ## Technologies Used
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express
-- API: OpenAI GPT
-- Styling: Custom CSS with theme support
-- Deployment: Railway
+- `Frontend:` HTML, CSS, JavaScript
+- `Backend:` Node.js, Express
+- `API:` OpenAI GPT
+- `Styling:`Custom CSS with theme support
+- `Deployment:` Railway
