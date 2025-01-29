@@ -4,26 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LLM Chatbot</title>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome (for sun/moon icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Your stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="particles-js" class="particles"></div>
     <div class="chat-container">
-      <div class="header">
-        <img src="ucf-logo.png" alt="Chatbot Logo" class="logo" />
-        <h1 class="name">Chatbot from Nicholas Klos</h1>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle" />
-          <span class="slider round"></span>
-        </label>
+      <div class="sidebar">
+        <button class="new-chat-btn" id="new-chat-button">
+          <span>+ New Chat</span>
+        </button>
+        <div class="chat-history" id="chat-history"></div>
       </div>
-      <div id="chat-log" class="chat-log">
-        <!-- Messages will be dynamically added here -->
-      </div>
-      <div class="input-container">
-        <input type="text" id="user-input" placeholder="Type your message..." />
-        <button onclick="sendMessage()">Send</button>
+
+      <div class="main-chat-area">
+        <div class="header">
+          <img src="ucf-logo.png" alt="Chatbot Logo" class="logo" />
+          <h1 class="name">Chatbot from Nicholas Klos</h1>
+
+          <!-- Font Awesome-based toggle for dark/light -->
+          <div class="darkmode" id="theme-toggle">
+            <!-- Sun icon (light mode) -->
+            <div class="light fa fa-sun"></div>
+            <!-- Moon icon (dark mode) -->
+            <div class="dark fa fa-moon"></div>
+          </div>
+        </div>
+
+        <div id="chat-log" class="chat-log">
+          <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div class="input-container">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+          />
+          <button class="send-button" id="send-button">
+            <span class="button-text">Send</span>
+            <span class="send-icon">✈️</span>
+          </button>
+        </div>
+
+        <div id="loading" class="loading-container">
+          <div class="typing-indicator">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Ionicons -->
+    <script
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      type="module"
+    ></script>
+    <script
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      nomodule
+    ></script>
+
+    <!-- Particles.js & Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Your main JavaScript file -->
     <script type="module" src="main.js"></script>
   </body>
 </html>
