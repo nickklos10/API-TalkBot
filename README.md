@@ -6,8 +6,9 @@ A chatbot web application leveraging OpenAI's GPT model for conversational AI. T
 
 - Interactive Chat Interface: Chat with the AI in a sleek and responsive interface.
 - OpenAI Integration: Uses GPT models to provide intelligent and contextual responses.
-- Dark Mode Support: Toggle between light and dark themes.
+- Enhanced Dark/Light Mode
 - Dynamic Conversation: Displays user and chatbot messages dynamically in a chat log.
+- Editable Chat Names: Easily rename your chats by clicking the pencil icon or double-clicking on the chat name in the sidebar.
 
 ## Usage
 
